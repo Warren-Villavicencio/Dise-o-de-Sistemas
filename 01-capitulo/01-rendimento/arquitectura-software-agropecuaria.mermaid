@@ -1,0 +1,26 @@
+graph TD
+    subgraph "Capa de Presentación"
+        A[Interfaz de Usuario]
+    end
+    subgraph "Capa de Aplicación"
+        B[Controladores]
+        C[Servicios]
+    end
+    subgraph "Capa de Dominio"
+        D[Modelos]
+        E[Lógica de Negocio]
+    end
+    subgraph "Capa de Infraestructura"
+        F[Repositorios]
+        G[Servicios Externos]
+    end
+    subgraph "Capa de Persistencia"
+        H[Base de Datos]
+    end
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    E --> F
+    F --> H
+    E --> G
